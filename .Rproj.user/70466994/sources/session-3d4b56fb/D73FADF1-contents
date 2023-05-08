@@ -1,6 +1,0 @@
-{
-  "Name": "TreatmentPatternsModule",
-  "Version": "0.0.999",
-  "Dependencies": [],
-  "TablePrefix": "tx_"
-}
