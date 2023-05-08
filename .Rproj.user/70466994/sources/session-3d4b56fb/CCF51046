@@ -1,0 +1,26 @@
+{
+    "id": "CCF51046",
+    "path": "~/R/modules/TreatmentPatterns/MetaData.json",
+    "project_path": "MetaData.json",
+    "type": "json",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1683579795275.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "5,1",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1683572087,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1683572087,
+    "read_only": false,
+    "read_only_alternatives": []
+}

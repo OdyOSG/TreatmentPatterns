@@ -1,0 +1,55 @@
+txPathSettings <- list(
+  minEraDuration = 0L,
+  eraCollapseSize = 30L,
+  combinationWindow = 30L,
+  minPostCombinationDuration =30L,
+  filterTreatments = "Changes",
+  periodPriorToIndex = 0L,
+  includeTreatments = "startDate",
+  maxPathLength = 5L,
+  minCellCount = 5L,
+  minCellMethod = "Remove",
+  groupCombinations = 10L,
+  addNoPaths = FALSE,
+  minNumberPatterns = 0L
+)
+class(txPathSettings) <- c("TreatmentPatternsSettings", "Settings")
+
+
+cohorts <- list(
+  targetId = 1L,
+  targetName = "Hypertension",
+  eventIds = c(8:10L),
+  eventNames = c("Ace", "AlphaInhibitors","ARB")
+)
+class(cohorts) <- c("Cohorts", "SharedResources")
+
+cohortTable <- "example_synpuf_110k"
+
+
+moduleExecutionSettings <- list(
+  connectionDetailsReference = "odysseus",
+  connectionDetails = DatabaseConnector::createConnectionDetails(
+    dbms = keyring::key_get('odysseus_dbms'),
+    user = keyring::key_get('odysseus_user'),
+    password = keyring::key_get('odysseus_password'),
+    connectionString = keyring::key_get('odysseus_connectionString')
+  ),
+  workDatabaseSchema = keyring::key_get('odysseus_writeSchema'),
+  cdmDatabaseSchema = keyring::key_get('odysseus_cdmSchema'),
+  cohortTable = cohortTable,
+  resultsFolder = "txPath_results",
+  minCellCount = 5L,
+  databaseId = "synpuf_110k"
+)
+class(moduleExecutionSettings) <- "executionSettings"
+
+
+testJobContext <- list(
+  sharedResources = cohorts,
+  settings = txPathSettings,
+  moduleExecutionSettings = moduleExecutionSettings
+)
+
+readr::write_rds(testJobContext, file = here::here("tests/testJobContext.rds"))
+

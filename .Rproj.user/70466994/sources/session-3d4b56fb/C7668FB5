@@ -1,0 +1,26 @@
+{
+    "id": "C7668FB5",
+    "path": "~/R/modules/TreatmentPatterns/Main.R",
+    "project_path": "Main.R",
+    "type": "r_source",
+    "hash": "947319022",
+    "contents": "",
+    "dirty": false,
+    "created": 1683574444971.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "86,2",
+        "scrollLine": "72"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1683584090,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1683584090868,
+    "read_only": false,
+    "read_only_alternatives": []
+}
